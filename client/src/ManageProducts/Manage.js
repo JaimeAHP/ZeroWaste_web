@@ -26,8 +26,6 @@ function Manage() {
       };
 
     const handleSubmit = (event) => {
-        // event.preventDefault();
-        console.log(edit);
         console.log(inputData);
         const { id, name, cost, link, desc } = inputData;
         const newOutputData = [...outputData, { name, cost, link, desc}]; 
@@ -94,8 +92,6 @@ function Manage() {
         console.log(inputData);
         setEdit(true);
         console.log(edit);
-        // axios.post(`http://localhost:8080/editposts/${postid}`,{postname, postcost, postlink, postdesc});
-
     };
 
     const noEdit = () =>{
@@ -114,19 +110,14 @@ function Manage() {
                 <div className = "main">
                     <div id = "history">
                         <h2>My Post</h2>
-                        <div className = "btn">
-                            {/* <button onClick={handleRefresh}>Refresh Posts</button> */}
-                        </div>
                         <div className = "posts">
                             {postList.map((data, index) => (
                                 <div key={index}>
                                     <div className = "post">
-                                        {/* <p>{`Product id: ${data.postid}`}</p> */}
                                         <p>{`Product Name: ${data.postname}`}</p>
                                         <p>{`Product Cost: ${data.postcost}`}</p>
                                         <p>{`Product Link: ${data.postlink}`}</p>
                                         <p>{`Product Description: ${data.postdesc}`}</p>
-                                        {/* <button>Delete</button> */}
                                         <button onClick={() => handleDelete(data.postid)}>Delete</button>
                                         <button onClick={() => {handleEdit(data.postid, data.postname, data.postcost, data.postlink, data.postdesc); setButtonPopup(true)}}>Edit</button>
                                     </div>

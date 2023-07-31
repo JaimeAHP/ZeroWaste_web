@@ -20,7 +20,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* padding: 100px 100px; */
     border: 2px solid #c9e5cc;
 }
 
@@ -47,10 +46,3 @@
     font-size: 14px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* *{
-    font: "verdana";
-    font-size: 12px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-} */
