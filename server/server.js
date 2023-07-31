@@ -8,46 +8,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// app.get('/postsid',(req,res)=> {
-//     const GETID_QUERY = `SELECT postid FROM G_52_DB.posts;`;
-//     connection.query(GETID_QUERY, (err, response)=> {
-//         if (err) console.log(err)
-//         else res.send(response)
-//     })
-// })
-
-// app.get('/postsname',(req,res)=> {
-//     const GETNAME_QUERY = `SELECT postname FROM G_52_DB.posts;`;
-//     connection.query(GETNAME_QUERY, (err, response)=> {
-//         if (err) console.log(err)
-//         else res.send(response)
-//     })
-// })
-
-// app.get('/postscost',(req,res)=> {
-//     const GETCOST_QUERY = `SELECT postcost FROM G_52_DB.posts;`;
-//     connection.query(GETCOST_QUERY, (err, response)=> {
-//         if (err) console.log(err)
-//         else res.send(response)
-//     })
-// })
-
-// app.get('/postslink',(req,res)=> {
-//     const GETLINK_QUERY = `SELECT postlink FROM G_52_DB.posts;`;
-//     connection.query(GETLINK_QUERY, (err, response)=> {
-//         if (err) console.log(err)
-//         else res.send(response)
-//     })
-// })
-
-// app.get('/postsdesc',(req,res)=> {
-//     const GETDESC_QUERY = `SELECT postdesc FROM G_52_DB.posts;`;
-//     connection.query(GETDESC_QUERY, (err, response)=> {
-//         if (err) console.log(err)
-//         else res.send(response)
-//     })
-// })
-
 app.get('/posts',(req,res)=> {
     const GET_QUERY = `SELECT * FROM G_52_DB.posts;`;
     connection.query(GET_QUERY, (err, response)=> {
@@ -77,8 +37,6 @@ app.put('/editposts/:intId',(req,res)=> {
         if (err) console.log(err)
     })
 })
-
-// UPDATE `G_52_DB`.`posts` SET `postname` = 'Banana', `postcost` = '£2', `postlink` = '*banana link*', `postdesc` = 'Bag of bananas' WHERE (`postid` = '20');
 
 app.listen(8080, ()=> {
     console.log('running on port 8080')
