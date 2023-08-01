@@ -109,7 +109,7 @@ function Manage() {
             <div className = "grid">
                 <div className = "main">
                     <div id = "history">
-                        <h2>My Post</h2>
+                        <h2>My Posts</h2>
                         <div className = "posts">
                             {postList.map((data, index) => (
                                 <div key={index}>
